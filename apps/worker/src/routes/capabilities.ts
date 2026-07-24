@@ -1,7 +1,8 @@
 import { Hono } from 'hono';
 import type { Env } from '../index.js';
+import workerPackage from '../../package.json';
 
-export const HARNESS_VERSION = '0.12.0';
+export const HARNESS_VERSION = workerPackage.version;
 export const API_VERSION = 1;
 export const CONNECTOR_VERSION = '2026-05-20';
 export const MIN_APP_VERSION = '1.0.0';

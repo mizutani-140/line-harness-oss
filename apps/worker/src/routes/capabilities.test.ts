@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { Hono } from 'hono';
 import { capabilities } from './capabilities.js';
+import workerPackage from '../../package.json';
 
 type TestEnv = {
   Variables: { staff: { id: string; role: 'owner' | 'admin' | 'staff' } };
@@ -43,7 +44,7 @@ describe('GET /api/capabilities', () => {
     const body = await res.json() as CapabilitiesResponse;
     expect(body.success).toBe(true);
     expect(body.data.harness_kind).toBe('line');
-    expect(body.data.harness_version).toMatch(/^\d+\.\d+\.\d+$/);
+    expect(body.data.harness_version).toBe(workerPackage.version);
     expect(body.data.api_version).toBe(1);
     expect(body.data.features).toContain('friends');
     expect(body.data.features).toContain('broadcasts');
