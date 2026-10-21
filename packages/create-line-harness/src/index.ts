@@ -4,6 +4,7 @@ import { existsSync, mkdirSync } from "node:fs";
 import { runSetup } from "./commands/setup.js";
 import { runUpdate } from "./commands/update.js";
 import { ensureRepo } from "./steps/clone-repo.js";
+import { assertSupportedNodeVersion } from "../../../scripts/node-runtime.mjs";
 
 const args = process.argv.slice(2);
 
@@ -67,6 +68,7 @@ function getConfigDir(explicitRepoDir: string | null): string {
 }
 
 async function main(): Promise<void> {
+  assertSupportedNodeVersion(process.versions.node);
   const {
     command,
     repoDir: explicitRepoDir,

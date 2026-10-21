@@ -21,7 +21,7 @@ line-harness/
 ```
 
 パッケージマネージャー: **pnpm 9.15.4**
-Node.js: **>= 20**
+Node.js: **^22.23.4 / ^24.22.1 / ^26.12.1**
 
 ---
 
@@ -29,7 +29,7 @@ Node.js: **>= 20**
 
 ### 前提条件
 
-- Node.js >= 20
+- Node.js ^22.23.4 / ^24.22.1 / ^26.12.1
 - pnpm >= 9
 - Cloudflare アカウント
 - LINE Developers アカウント
@@ -158,7 +158,7 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: "22.23.4"
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter @line-crm/shared --filter @line-crm/line-sdk --filter @line-crm/db build
@@ -195,7 +195,7 @@ wrangler pages deploy apps/web/.next --project-name=your-admin-name
 
 - ビルドコマンド: `pnpm install && pnpm -r build && pnpm --filter web build`
 - 出力ディレクトリ: `apps/web/.next`
-- Node.js バージョン: 22
+- Node.js バージョン: 22.23.4
 
 ---
 
