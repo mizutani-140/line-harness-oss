@@ -57,7 +57,7 @@ Takes about 5 minutes. Once done, the dashboard at `https://<your-name>-admin.pa
 
 - Cloudflare account (free tier is fine)
 - LINE Official Account + Messaging API channel
-- Node.js 22+ / pnpm
+- Node.js ^22.23.4 / ^24.22.1 / ^26.12.1 + pnpm
 
 ---
 

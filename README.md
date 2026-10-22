@@ -57,7 +57,7 @@ CLI が以下を全部やる:
 
 - Cloudflare アカウント（無料枠で OK）
 - LINE 公式アカウント + Messaging API channel
-- Node.js 22+ / pnpm
+- Node.js ^22.23.4 / ^24.22.1 / ^26.12.1 + pnpm
 
 ---
 

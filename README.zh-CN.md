@@ -57,7 +57,7 @@ CLI 自动完成以下全部步骤：
 
 - Cloudflare 账号（免费套餐即可）
 - LINE 官方账号 + Messaging API channel
-- Node.js 22+ / pnpm
+- Node.js ^22.23.4 / ^24.22.1 / ^26.12.1 + pnpm
 
 ---
 

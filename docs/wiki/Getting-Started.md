@@ -4,7 +4,7 @@
 
 | 要件 | バージョン | 備考 |
 |------|-----------|------|
-| Node.js | 20+ | `node -v` で確認 |
+| Node.js | ^22.23.4 / ^24.22.1 / ^26.12.1 | `node -v` で確認 |
 | pnpm | 9+ | `npm install -g pnpm` でインストール |
 | Cloudflare アカウント | — | [サインアップ](https://dash.cloudflare.com/sign-up) |
 | LINE Developers アカウント | — | [登録](https://developers.line.biz/) |

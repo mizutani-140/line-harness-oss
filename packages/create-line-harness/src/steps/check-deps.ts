@@ -1,5 +1,7 @@
 import * as p from "@clack/prompts";
 import { execa } from "execa";
+import { supportsNodeVersion } from "../../../../scripts/node-runtime.mjs";
+export { supportsNodeVersion } from "../../../../scripts/node-runtime.mjs";
 
 export async function checkDeps(): Promise<void> {
   const s = p.spinner();
@@ -7,10 +9,9 @@ export async function checkDeps(): Promise<void> {
 
   // Check Node.js version
   const nodeVersion = process.versions.node;
-  const major = parseInt(nodeVersion.split(".")[0], 10);
-  if (major < 20) {
+  if (!supportsNodeVersion(nodeVersion)) {
     s.stop("環境チェック失敗");
-    p.cancel(`Node.js 20 以上が必要です（現在: ${nodeVersion}）`);
+    p.cancel(`Node.js 22.23.4 / 24.22.1 / 26.12.1 以降の各対応系列が必要です（現在: ${nodeVersion}）`);
     process.exit(1);
   }
 

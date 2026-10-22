@@ -57,7 +57,7 @@ Tarda unos 5 minutos. Al finalizar, el panel en `https://<your-name>-admin.pages
 
 - Cuenta de Cloudflare (con el plan gratuito basta)
 - Cuenta Oficial de LINE + canal Messaging API
-- Node.js 22+ / pnpm
+- Node.js ^22.23.4 / ^24.22.1 / ^26.12.1 + pnpm
 
 ---
 
